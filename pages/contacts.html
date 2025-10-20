@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Контакты — Гладких Иван</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип">
+        </a>
+        <h1 class="name">Гладких Иван</h1>
+    </div>
+    <nav class="nav">
+        <a href="../index.html">Главная</a>
+        <a href="projects.html">Проекты</a>
+        <a href="diary.html">Дневник</a>
+        <a href="contacts.html" class="active">Контакты</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="contact-form">
+        <h2>Свяжитесь со мной (пж не надо я не отвечу)</h2>
+        <form id="contactForm" novalidate>
+            <label>Имя:<input type="text" name="name" required></label>
+            <label>Email:<input type="email" name="email" required></label>
+            <label>Сообщение:<textarea name="message" rows="5" required></textarea></label>
+            <button type="submit" class="btn">Отправить сообщение</button>
+        </form>
+
+        <div class="contact-info">
+            <p>📧 хоть пишите, хоть не пишите, всё равно не отвечу</p>
+            <p>📱 GitHub: не хочу не скажу</p>
+            <p>📍 Лондон, Прага, Ницца</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<script src="../scripts/script.js"></script>
+
+
+</body>
+</html>

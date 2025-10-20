@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Богатырев Сергей — Проекты</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип">
+        </a>
+        <h1 class="name">Богатырев Сергей</h1>
+    </div>
+    <nav class="nav">
+        <a href="../index.html">Главная</a>
+        <a href="projects.html" class="active">Проекты</a>
+        <a href="diary.html">Дневник</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="projects-section">
+        <h2>Мои проекты</h2>
+
+        <div class="project-filters">
+            <button data-filter="all" class="active">Все</button>
+            <button data-filter="mine">Майнрафт</button>
+            <button data-filter="cook">Готовка</button>
+            <button data-filter="freelance">Фриланс</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="mine" onclick="openModal('Не нажимайте пж я честно не знаю что тут писать', 'https://example.com', 'https://github.com/example')">
+                <h3>Прошёл майнкрафт на хардкоре менее чем за час</h3>
+                <p>не знаю чё ещё написать я просто крут</p>
+            </div>
+            <div class="project-card" data-category="cook" onclick="openModal('Не нажимайте пж я честно не знаю что тут писать', 'https://example.com', 'https://github.com/example')">
+                <h3>Вчера пытался приготовить чипсы</h3>
+                <p>За 2 часа получил 5 нормальных чипсин, остальные сгорели</p>
+            </div>
+            <div class="project-card" data-category="freelance" onclick="openModal('Не нажимайте пж я честно не знаю что тут писать', 'https://example.com', 'https://github.com/example')">
+                <h3>Встал с кровати</h3>
+                <p>похлопайте пж я фри человек</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-tech"></p>
+        <div id="modal-screenshots"></div>
+        <p><a id="modal-live" href="#" target="_blank">Первая гиперссылка в никуда</a> | <a id="modal-code" href="#" target="_blank">Вторая гиперссылка в никуда</a></p>
+    </div>
+</div>
+
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
