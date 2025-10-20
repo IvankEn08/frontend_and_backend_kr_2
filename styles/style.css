@@ -1,8 +1,10 @@
 :root {
-    --gap: 10px;
-    --max: 1200px;
-    --color-primary: #7b61ff;
-    --color-accent: #3f3cff;
+    --gap: 16px;
+    --max: 1100px;
+    --color-primary: #ff4444;
+    --color-bg: #0e0e0e;
+    --color-surface: #1b1b1b;
+    --color-text: #f1f1f1;
     --radius: 12px;
 }
 
@@ -11,53 +13,39 @@
 }
 
 body {
-    font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
+    font-family: "Inter", system-ui, Segoe UI, Arial, sans-serif;
     margin: 0;
-    color: #e4e4e4;
-    background: #0f0f15;
+    background: var(--color-bg);
+    color: var(--color-text);
 }
 
 /* --- КНОПКИ --- */
 .btn {
     display: inline-block;
-    padding: .6rem .8rem;
+    padding: 0.6rem 1rem;
     border-radius: var(--radius);
     font: inherit;
     cursor: pointer;
     border: none;
     background: var(--color-primary);
     color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
 }
+
 .btn:hover {
-    filter: brightness(1.2);
-}
-.btn--primary {
-    background: var(--color-primary);
-    color: #fff;
+    filter: brightness(1.3);
+    transform: scale(1.03);
 }
 
-/* --- ОБЩИЕ ЭЛЕМЕНТЫ --- */
-.logo {
-    width: 250px;
-    height: 250px;
-}
-.container {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 24px;
-}
-
-/* --- ШАПКА --- */
+/* --- ХЕДЕР --- */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 24px;
-    border-bottom: 1px solid #222;
-    background: #1a1a24;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #333;
+    background: var(--color-surface);
 }
 
 .brand {
@@ -67,28 +55,29 @@ body {
 }
 
 .logo {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.3s ease;
     border: 2px solid var(--color-primary);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 .logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .logo:hover {
-    transform: scale(1.08);
-    opacity: 0.9;
-    box-shadow: 0 0 10px var(--color-primary);
+    transform: scale(1.05);
+    opacity: 0.85;
 }
 
 .name {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-primary);
 }
 
 /* --- НАВИГАЦИЯ --- */
@@ -105,22 +94,14 @@ body {
     padding-bottom: 2px;
     transition: color 0.2s ease;
 }
+
 .nav a:hover {
-    color: #fff;
+    color: var(--color-primary);
 }
+
 .nav a.active {
     color: var(--color-primary);
     font-weight: 600;
-}
-.nav a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--color-primary);
-    border-radius: 1px;
 }
 
 /* --- HERO --- */
@@ -128,40 +109,34 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
-    padding: 24px 0;
-    color: #ddd;
-}
-.photo img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(123, 97, 255, 0.5);
+    padding: 32px 0;
 }
 
-/* --- НАВЫКИ И ПРОЕКТЫ --- */
-.skills, .top-projects {
-    margin-top: 24px;
+.photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
 }
-.skill-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+
+/* --- СКИЛЛЫ --- */
 .skill-list li {
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .skill-list .bar {
-    width: 40%;
+    width: 45%;
     height: 12px;
-    background: #2a2a3a;
+    background: #333;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
 }
+
 .skill-list .bar::after {
     content: '';
     position: absolute;
@@ -174,115 +149,52 @@ body {
     transition: width .6s ease;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-    margin-top: 12px;
-}
+/* --- КАРТОЧКИ --- */
 .card, .project-card {
-    padding: 18px;
-    border: 1px solid #333;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--color-surface);
+    border: 1px solid #2a2a2a;
     text-align: center;
-    background: #1c1c25;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover, .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(123, 97, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-/* --- МОДАЛЬНЫЕ ОКНА --- */
+/* --- МОДАЛКА --- */
 .modal {
     position: fixed;
     inset: 0;
     display: none;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(3px);
+    background: rgba(0,0,0,0.6);
 }
+
 .modal[aria-hidden="false"] {
     display: flex;
 }
+
 .modal-content {
-    background: #1a1a24;
-    color: #eee;
-    padding: 20px;
+    background: #1b1b1b;
+    padding: 24px;
     border-radius: 12px;
-    border: 1px solid #333;
     max-width: 720px;
     width: 90%;
-    box-shadow: 0 0 20px rgba(123, 97, 255, 0.3);
+    border: 1px solid #333;
 }
 
 /* --- КОНТАКТНАЯ ФОРМА --- */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
     border-radius: 12px;
-    background: #1a1a24;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background: #161616;
+    border: 1px solid #333;
 }
+
 .contact-form h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.6rem;
     color: var(--color-primary);
-}
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.contact-form label {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    color: #ccc;
-}
-.contact-form input,
-.contact-form textarea {
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #444;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #111;
-    color: #eee;
-    transition: border-color 0.2s;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--color-primary);
-    outline: none;
-}
-.contact-form .btn {
-    padding: 10px 15px;
-    background-color: var(--color-primary);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.contact-form .btn:hover {
-    background-color: var(--color-accent);
-}
-.contact-info {
-    margin-top: 25px;
-    text-align: center;
-    color: #888;
-    font-size: 0.95rem;
-}
-.contact-info p {
-    margin: 5px 0;
 }
 
 /* --- ФУТЕР --- */
@@ -291,28 +203,11 @@ body {
     padding: 18px;
     border-top: 1px solid #333;
     margin-top: 36px;
-    color: #777;
-    background: #1a1a24;
+    background: #161616;
+    color: #aaa;
 }
 
 /* --- АДАПТИВ --- */
 @media(max-width:700px){
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .nav {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .name {
-        font-size: 1.1rem;
-    }
+    .hero { flex-direction: column; text-align: center; }
 }
