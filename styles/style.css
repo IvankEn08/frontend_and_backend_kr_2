@@ -242,6 +242,8 @@ body {
     max-width: 400px;
     text-align: center;
 }
+
 .skip-link {
-    display: none;
+  position: absolute;
+  left: -9999px;
 }
