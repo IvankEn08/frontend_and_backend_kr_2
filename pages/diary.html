@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Дневник — Гладких Иван</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип сайта Гладких Ивана">
+        </a>
+        <h1 class="name">Гладких Иван</h1>
+    </div>
+
+    <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="../index.html">Главная</a>
+        <a class="nav__link" href="projects.html">Проекты</a>
+        <a class="nav__link" href="diary.html" aria-current="page">Дневник</a>
+        <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main class="container" id="main">
+    <section class="diary">
+        <h2>Мой учебный прогресс</h2>
+        <ul class="timeline" role="list">
+            <li role="listitem"><strong>30 июля</strong> — Получить ачивку за 1000 доставленных заказов в яндекс еде ✓</li>
+            <li role="listitem"><strong>15 июля</strong> — Уволиться из яндекса, ведь самокат лучше ✓</li>
+            <li role="listitem"><strong>28 июня</strong> — Вкусвилл лучшая контора на свете  ✓</li>
+            <li role="listitem"><strong>13 октября</strong> — Вспомнить про учёбу... <em>in progress</em></li>
+        </ul>
+
+        <h3>Текущие курсы</h3>
+        <ul class="skill-list" role="list">
+            <li role="listitem">2 КУРС <span class="bar" data-level="25"></span></li>
+            <li role="listitem">КУРС ПО ТОМУ, КАК ПРОВЕРНУТЬ СХЕМУ ДОЛИНОЙ<span class="bar" data-level="97"></span></li>
+        </ul>
+
+        <button class="btn" id="addEntry" aria-label="Добавить новую запись в дневник">Добавить запись</button>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

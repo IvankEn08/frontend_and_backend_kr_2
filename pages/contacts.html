@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Контакты — Гладких Иван</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип сайта Гладких Ивана">
+        </a>
+        <h1 class="name">Гладких Иван</h1>
+    </div>
+
+    <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="../index.html">Главная</a>
+        <a class="nav__link" href="projects.html">Проекты</a>
+        <a class="nav__link" href="diary.html">Дневник</a>
+        <a class="nav__link active" href="contacts.html" aria-current="page">Контакты</a>
+    </nav>
+</header>
+
+<main class="container" id="main">
+    <section class="contact-form">
+        <h2>Свяжитесь со мной</h2>
+        <form id="contactForm" novalidate aria-describedby="form-status" aria-live="polite">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" required aria-required="true">
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email"
+                   aria-describedby="email-hint email-error"
+                   required aria-required="true">
+            <small id="email-hint">Мы пришлём ответ на этот адрес</small>
+            <span id="email-error" class="visually-hidden" role="alert"></span>
+
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+            <button type="submit" class="btn" aria-label="Отправить сообщение">Отправить сообщение</button>
+        </form>
+
+        <div id="form-status" class="visually-hidden" aria-live="polite"></div>
+
+        <div class="contact-info">
+            <p>📧 <a href="mailto:real_donald_trump@gmail.com">real_donald_trump@gmail.com</a></p>
+            <p>📱 GitHub: <a href="https://github.com/real_donald_trump" target="_blank" rel="noopener noreferrer">real_donald_trump</a></p>
+            <p>📍 Трампайо, Трампования</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

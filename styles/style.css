@@ -1,0 +1,247 @@
+:root {
+    --gap: 16px;
+    --max: 1100px;
+    --color-primary: #ff4444;
+    --color-bg: #0e0e0e;
+    --color-surface: #1b1b1b;
+    --color-text: #f1f1f1;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", system-ui, Segoe UI, Arial, sans-serif;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* --- КНОПКИ --- */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    background: var(--color-primary);
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.3);
+    transform: scale(1.03);
+}
+
+/* --- ХЕДЕР --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 1px solid #333;
+    background: var(--color-surface);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--color-primary);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* --- НАВИГАЦИЯ --- */
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+.nav a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* --- HERO --- */
+.hero {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+}
+
+/* --- СКИЛЛЫ --- */
+.skill-list li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-list .bar {
+    width: 45%;
+    height: 12px;
+    background: #333;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-list .bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--color-primary);
+    border-radius: 8px;
+    transition: width .6s ease;
+}
+
+/* --- КАРТОЧКИ --- */
+.card, .project-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--color-surface);
+    border: 1px solid #2a2a2a;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* --- МОДАЛКА --- */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    background: #1b1b1b;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 720px;
+    width: 90%;
+    border: 1px solid #333;
+}
+
+/* --- КОНТАКТНАЯ ФОРМА --- */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: #161616;
+    border: 1px solid #333;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+/* --- ФУТЕР --- */
+.site-footer {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid #333;
+    margin-top: 36px;
+    background: #161616;
+    color: #aaa;
+}
+
+/* --- АДАПТИВ --- */
+@media(max-width:700px){
+    .hero { flex-direction: column; text-align: center; }
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* центрирует все поля по горизонтали */
+    justify-content: center;  /* если нужно по вертикали */
+    gap: 18px;
+}
+
+.contact-form label {
+    width: 100%;
+    max-width: 400px;         /* ширина каждого поля */
+    text-align: left;         /* подпись остаётся слева */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form .btn {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.skip-link {
+    display: none;
+}

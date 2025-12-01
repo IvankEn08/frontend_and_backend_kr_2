@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Гладких Иван — Главная</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html" class="logo">
+            <img src="assets/favicon.png" alt="Логотип сайта Гладких Ивана">
+        </a>
+        <h1 class="name">Гладких Иван</h1>
+    </div>
+
+    <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="index.html" aria-current="page">Главная</a>
+        <a class="nav__link" href="pages/projects.html">Проекты</a>
+        <a class="nav__link" href="pages/diary.html">Дневник</a>
+        <a class="nav__link" href="pages/contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main id="main" class="container">
+    <section class="hero hero--bleed">
+        <figure class="hero__image">
+            <picture>
+                <source type="image/avif"
+                        srcset="images/avatar-150.avif 150w, images/avatar-200.avif 200w, images/avatar-300.avif 300w"
+                        sizes="200px">
+                <source type="image/webp"
+                        srcset="images/avatar-150.webp 150w, images/avatar-200.webp 200w, images/avatar-300.webp 300w"
+                        sizes="200px">
+                <img class="hero__photo"
+                     src="images/avatar-200.jpg"
+                     srcset="images/avatar-150.jpg 150w, images/avatar-200.jpg 200w, images/avatar-300.jpg 300w"
+                     sizes="200px"
+                     width="200" height="200"
+                     alt="Фотография Гладких Ивана"
+                     fetchpriority="high">
+            </picture>
+        </figure>
+
+        <div class="intro">
+            <h2 class="hero__greeting">Привет! Я ванёк</h2>
+            <p>Группа ЭФБО-15-24. Ничё не пониваю в этой вашей так называемой жизни.</p>
+            <a class="btn" href="assets/resume.pdf" download aria-label="Скачать резюме в формате PDF">Скачать резюме</a>
+        </div>
+    </section>
+
+    <section class="skills section">
+        <h3 class="section-title">Мои навыки</h3>
+        <ul class="skill-list">
+            <li>Лежание на диване <span class="bar" data-level="97"></span></li>
+            <li>Разбивать свой телефон <span class="bar" data-level="63"></span></li>
+            <li>Думать как гений <span class="bar" data-level="14"></span></li>
+            <li>Жёстко готовить <span class="bar" data-level="60"></span></li>
+        </ul>
+    </section>
+
+    <section class="top-projects section projects-area">
+        <h3 class="section-title">Лучшие достижения</h3>
+        <div class="projects-list">
+            <article class="project-card">Я пришёл сегодня в вуз</article>
+            <article class="project-card">Написал ботика, с помощью которого можно общаться между вк и тг</article>
+            <article class="project-card">Прошёл майнкрафт на хардкоре</article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

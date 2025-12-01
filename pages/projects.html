@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Гладких Иван — Проекты</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип сайта Гладких Ивана">
+        </a>
+        <h1 class="name">Гладких Иван</h1>
+    </div>
+
+    <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="../index.html">Главная</a>
+        <a class="nav__link" href="projects.html" aria-current="page">Проекты</a>
+        <a class="nav__link" href="diary.html">Дневник</a>
+        <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main id="main" class="container">
+    <section class="projects-area">
+        <h2 class="section-title">Мои проекты</h2>
+
+        <div class="project-filters" role="group" aria-label="Фильтр проектов">
+            <button class="btn btn--primary" data-filter="all" aria-pressed="true">Все</button>
+            <button class="btn" data-filter="layout" aria-pressed="false">Верстка</button>
+            <button class="btn" data-filter="java" aria-pressed="false">Доставка</button>
+            <button class="btn" data-filter="freelance" aria-pressed="false">Фриланс</button>
+        </div>
+
+        <div class="projects-list">
+            <article class="project-card" data-category="layout">
+                <button type="button" class="project-card__open btn--link"
+                        onclick="openModal('Личный сайт (вот прям сейчас вы его видите)', 'HTML, CSS', '../images/project1-400.jpg', 'https://example.com', 'https://github.com/example')"
+                        aria-label="Подробнее о проекте Личный сайт (HTML, CSS)">
+                    <h3>Личный сайт</h3>
+                    <p>HTML, CSS</p>
+                </button>
+            </article>
+
+            <article class="project-card" data-category="java">
+                <button type="button" class="project-card__open btn--link"
+                        onclick="openModal('Получил от Яндекса ачивку за 1000 доставленных заказов', 'Доставка', '../images/project2-400.jpg', 'https://eenet.com', 'https://github.com/xzgde')"
+                        aria-label="Подробнее о том, куда я потратил 3 года своей жизни">
+                    <h3>Получил от Яндекса ачивку за 1000 доставленных заказов</h3>
+                    <p>Доставка</p>
+                </button>
+            </article>
+
+            <article class="project-card" data-category="freelance">
+                <button type="button" class="project-card__open btn--link"
+                        onclick="openModal('Жёстко сплю', 'Фриланс', '../images/project3-400.jpg', 'https://agaseichasiskinul.com', 'https://github.com/nehochu')"
+                        aria-label="Подробнее о моём необычном фрилансе">
+                    <h3>Жёстко сплю</h3>
+                    <p>Фриланс</p>
+                </button>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()" aria-label="Закрыть диалоговое окно">&times;</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-tech"></p>
+        <div id="modal-screenshots"></div>
+        <p>
+            <a id="modal-live" href="#" target="_blank" rel="noopener noreferrer">Живая версия</a> |
+            <a id="modal-code" href="#" target="_blank" rel="noopener noreferrer">Исходный код</a>
+        </p>
+    </div>
+</div>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>
